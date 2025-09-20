@@ -3,10 +3,6 @@ from random import randint
 from random import shuffle
 
 
-
-
-
-
 # Ekran Oluşturma
 
 screen = turtle.Screen()
@@ -15,8 +11,6 @@ shuffle(screen_color_list)
 screen.bgcolor(screen_color_list[randint(0,len(screen_color_list)-1)])
 screen.title("Click The Turtle")
 screen.tracer(0) # animasyonları kapatır
-
-
 
 
 # Zamanlayıcı Oluşturma
@@ -156,23 +150,6 @@ t5.shapesize(t_size)
 t5.fillcolor("purple")
 t5.speed(6.5)
 
-'''
-t1.penup()
-t1.goto(x_list[randint(0,len(x_list)-1)],y_list[randint(0,len(y_list)-1)])
-
-t2.penup()
-t2.goto(x_list[randint(0,len(x_list)-1)],y_list[randint(0,len(y_list)-1)])
-
-t3.penup()
-t3.goto(x_list[randint(0,len(x_list)-1)],y_list[randint(0,len(y_list)-1)])
-
-t4.penup()
-t4.goto(x_list[randint(0,len(x_list)-1)],y_list[randint(0,len(y_list)-1)])
-
-t5.penup()
-t5.goto(x_list[randint(0,len(x_list)-1)],y_list[randint(0,len(y_list)-1)])
-'''
-
 turtles = [t1,t2,t3,t4,t5]
 
 
@@ -180,8 +157,6 @@ def change_turtle():
     for t in turtles:
         t.penup()
         t.goto(x_list[randint(0,len(x_list)-1)],y_list[randint(0,len(y_list)-1)])
-
-
 
 
 # Ekrana Tıklama Özelliği
@@ -202,12 +177,6 @@ def click(_x,_y):
         pen4.goto(-650,385)
         pen4.pendown()
         pen4.write(f"Your Score : {written}",font=style1,align="center")
-
-
-
-
-
-
 
 
 screen.update() # ekranı günceller , yaptıklarımızın gözükmesini sağlar
