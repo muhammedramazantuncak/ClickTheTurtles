@@ -26,10 +26,16 @@ style = ("Courier",30,"bold italic")
 timer = 30
 starting_game = 5
 
+# Çerçevenin uzunluğuna göre konumlandırma
+
+window_height = screen.window_height() / 2
+
+y = window_height * 1.05
+
 def startgame():
     global starting_game
     pen1.penup()
-    pen1.goto(0, 380)
+    pen1.goto(0, y)
     pen1.pendown()
     pen1.clear()
     if starting_game > 0:
@@ -44,7 +50,7 @@ def countdown():
     global timer
     shufflecolorlist()
     pen1.penup()
-    pen1.goto(0,380)
+    pen1.goto(0,y)
     pen1.pendown()
     pen1.clear()
     if timer > 0:
@@ -58,7 +64,7 @@ def timeup():
     global timer
     if timer == 0:
         pen1.penup()
-        pen1.goto(0, 380)
+        pen1.goto(0, y)
         pen1.pendown()
         pen1.clear()
         pen1.write("Time Is Up !!!" , font=style, align="center")
